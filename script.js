@@ -1,0 +1,4 @@
+// menu togal code
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".navbar-burger"),r=document.querySelector(".navbar-menu"),n=document.querySelector(".navbar-close"),t=document.querySelector(".navbar-backdrop"),a=()=>r.classList.toggle("hidden");e&&e.addEventListener("click",a),n&&n.addEventListener("click",a),t&&t.addEventListener("click",a)});
+// slider code
+document.addEventListener("alpine:init",()=>{Alpine.data("slider",()=>({currentIndex:1,images:["https://source.unsplash.com/1600x900/?beach","https://source.unsplash.com/1600x900/?cat","https://source.unsplash.com/1600x900/?dog","https://source.unsplash.com/1600x900/?lego","https://source.unsplash.com/1600x900/?textures&patterns"],back(){this.currentIndex=Math.max(this.currentIndex-1,1)},next(){this.currentIndex=this.currentIndex%this.images.length+1}}))});
